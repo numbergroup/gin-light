@@ -11,9 +11,9 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/gin-gonic/gin/internal/msgpack"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/ugorji/go/codec"
 )
 
 func TestBindingMsgPack(t *testing.T) {
@@ -21,11 +21,8 @@ func TestBindingMsgPack(t *testing.T) {
 		Foo: "bar",
 	}
 
-	h := new(codec.MsgpackHandle)
-	assert.NotNil(t, h)
 	buf := bytes.NewBuffer([]byte{})
-	assert.NotNil(t, buf)
-	err := codec.NewEncoder(buf, h).Encode(test)
+	err := msgpack.Encode(buf, test)
 	require.NoError(t, err)
 
 	data := buf.Bytes()

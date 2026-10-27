@@ -11,7 +11,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/ugorji/go/codec"
+	"github.com/gin-gonic/gin/internal/msgpack"
 )
 
 type msgpackBinding struct{}
@@ -29,8 +29,7 @@ func (msgpackBinding) BindBody(body []byte, obj any) error {
 }
 
 func decodeMsgPack(r io.Reader, obj any) error {
-	cdc := new(codec.MsgpackHandle)
-	if err := codec.NewDecoder(r, cdc).Decode(&obj); err != nil {
+	if err := msgpack.Decode(r, &obj); err != nil {
 		return err
 	}
 	return validate(obj)

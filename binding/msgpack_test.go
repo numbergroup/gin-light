@@ -10,9 +10,9 @@ import (
 	"bytes"
 	"testing"
 
+	"github.com/gin-gonic/gin/internal/msgpack"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/ugorji/go/codec"
 )
 
 func TestMsgpackBindingBindBody(t *testing.T) {
@@ -27,8 +27,7 @@ func TestMsgpackBindingBindBody(t *testing.T) {
 
 func msgpackBody(t *testing.T, obj any) []byte {
 	var bs bytes.Buffer
-	h := &codec.MsgpackHandle{}
-	err := codec.NewEncoder(&bs, h).Encode(obj)
+	err := msgpack.Encode(&bs, obj)
 	require.NoError(t, err)
 	return bs.Bytes()
 }

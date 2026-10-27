@@ -7,13 +7,14 @@
 package render
 
 import (
+	"bytes"
 	"errors"
 	"net/http/httptest"
 	"testing"
 
+	"github.com/gin-gonic/gin/internal/msgpack"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/ugorji/go/codec"
 )
 
 func TestRenderMsgPack(t *testing.T) {
@@ -29,12 +30,10 @@ func TestRenderMsgPack(t *testing.T) {
 
 	require.NoError(t, err)
 
-	var decoded map[string]any
-	var mh codec.MsgpackHandle
-	mh.RawToString = true
-	err = codec.NewDecoderBytes(w.Body.Bytes(), &mh).Decode(&decoded)
+	var decoded map[string]string
+	err = msgpack.Decode(bytes.NewReader(w.Body.Bytes()), &decoded)
 	require.NoError(t, err)
-	assert.Equal(t, data, decoded)
+	assert.Equal(t, map[string]string{"foo": "bar"}, decoded)
 	assert.Equal(t, "application/msgpack; charset=utf-8", w.Header().Get("Content-Type"))
 }
 
@@ -50,14 +49,14 @@ func TestWriteMsgPack(t *testing.T) {
 
 	assert.Equal(t, "application/msgpack; charset=utf-8", w.Header().Get("Content-Type"))
 
-	var decoded map[string]any
-	var mh codec.MsgpackHandle
-	mh.RawToString = true
-	err = codec.NewDecoderBytes(w.Body.Bytes(), &mh).Decode(&decoded)
+	var decoded struct {
+		Foo string `json:"foo"`
+		Num int    `json:"num"`
+	}
+	err = msgpack.Decode(bytes.NewReader(w.Body.Bytes()), &decoded)
 	require.NoError(t, err)
-	assert.Len(t, decoded, 2)
-	assert.Equal(t, "bar", decoded["foo"])
-	assert.EqualValues(t, 42, decoded["num"])
+	assert.Equal(t, "bar", decoded.Foo)
+	assert.Equal(t, 42, decoded.Num)
 }
 
 type failWriter struct {

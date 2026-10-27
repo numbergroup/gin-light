@@ -9,7 +9,7 @@ package render
 import (
 	"net/http"
 
-	"github.com/ugorji/go/codec"
+	"github.com/gin-gonic/gin/internal/msgpack"
 )
 
 // Check interface implemented here to support go build tag nomsgpack.
@@ -38,6 +38,5 @@ func (r MsgPack) Render(w http.ResponseWriter) error {
 // WriteMsgPack writes MsgPack ContentType and encodes the given interface object.
 func WriteMsgPack(w http.ResponseWriter, obj any) error {
 	writeContentType(w, msgpackContentType)
-	var mh codec.MsgpackHandle
-	return codec.NewEncoder(w, &mh).Encode(obj)
+	return msgpack.Encode(w, obj)
 }

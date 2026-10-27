@@ -41,7 +41,6 @@ jobs:
           [
             "",
             "-tags nomsgpack",
-            '--ldflags="-checklinkname=0" -tags sonic',
             "-tags go_json",
             "-race",
           ]
