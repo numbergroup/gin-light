@@ -83,12 +83,6 @@ You can find a number of ready-to-run examples at [Gin examples repository](http
 
 Gin uses `encoding/json` as the default JSON package but you can change it by building from other tags.
 
-[jsoniter](https://github.com/json-iterator/go)
-
-```sh
-go build -tags=jsoniter .
-```
-
 [go-json](https://github.com/goccy/go-json)
 
 ```sh
@@ -2161,57 +2155,6 @@ Gin support custom json serialization and deserialization logic without using co
 1. Define a custom struct implements the `json.Core` interface.
 
 2. Before your engine starts, assign values to `json.API` using the custom struct.
-
-```go
-package main
-
-import (
-  "io"
-
-  "github.com/numbergroup/gin-light"
-  "github.com/numbergroup/gin-light/codec/json"
-  jsoniter "github.com/json-iterator/go"
-)
-
-var customConfig = jsoniter.Config{
-  EscapeHTML:             true,
-  SortMapKeys:            true,
-  ValidateJsonRawMessage: true,
-}.Froze()
-
-// implement api.JsonApi
-type customJsonApi struct {
-}
-
-func (j customJsonApi) Marshal(v any) ([]byte, error) {
-  return customConfig.Marshal(v)
-}
-
-func (j customJsonApi) Unmarshal(data []byte, v any) error {
-  return customConfig.Unmarshal(data, v)
-}
-
-func (j customJsonApi) MarshalIndent(v any, prefix, indent string) ([]byte, error) {
-  return customConfig.MarshalIndent(v, prefix, indent)
-}
-
-func (j customJsonApi) NewEncoder(writer io.Writer) json.Encoder {
-  return customConfig.NewEncoder(writer)
-}
-
-func (j customJsonApi) NewDecoder(reader io.Reader) json.Decoder {
-  return customConfig.NewDecoder(reader)
-}
-
-func main() {
-  //Replace the default json api
-  json.API = customJsonApi{}
-
-  //Start your gin engine
-  router := gin.Default()
-  router.Run(":8080")
-}
-```
 
 ### Support Let's Encrypt
 

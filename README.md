@@ -8,7 +8,8 @@ Gin Light is a lighter derivative of the [Gin Web Framework](https://github.com/
 
 **What is different from Gin:**
 
-- **No [bytedance/sonic](https://github.com/bytedance/sonic).** The `sonic` build tag is gone; JSON uses `encoding/json`, or `go_json` / `jsoniter` with their build tags.
+- **No [bytedance/sonic](https://github.com/bytedance/sonic).** The `sonic` build tag is gone; JSON uses `encoding/json`, or `go_json` with its build tag.
+- **No [json-iterator/go](https://github.com/json-iterator/go).** The `jsoniter` build tag is gone.
 - **No [ugorji/go/codec](https://github.com/ugorji/go).** MessagePack rendering and binding use a small built-in encoder derived from [shamaton/msgpack](https://github.com/shamaton/msgpack), which produces and accepts the same data as Gin's previous ugorji-based implementation. This cuts about 6 MB from a minimal binary.
 
 ---
