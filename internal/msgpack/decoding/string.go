@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 var emptyBytes = []byte{}

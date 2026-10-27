@@ -1,5 +1,12 @@
 # Gin ChangeLog
 
+## Gin Light
+
+Gin Light (`github.com/numbergroup/gin-light`) is derived from Gin v1.12.0.
+
+- Removed `github.com/bytedance/sonic` and the `sonic` build tag.
+- Replaced `github.com/ugorji/go/codec` with an internal MessagePack encoder derived from `github.com/shamaton/msgpack`, compatible with the data Gin produced and accepted before.
+
 ## Gin v1.12.0
 
 ### Features

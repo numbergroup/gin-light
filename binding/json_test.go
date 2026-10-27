@@ -11,10 +11,10 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/gin-gonic/gin/codec/json"
-	"github.com/gin-gonic/gin/render"
 	jsoniter "github.com/json-iterator/go"
 	"github.com/modern-go/reflect2"
+	"github.com/numbergroup/gin-light/codec/json"
+	"github.com/numbergroup/gin-light/render"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

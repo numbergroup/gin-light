@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/gin-gonic/gin"
+	"github.com/numbergroup/gin-light"
 )
 
 var engine = sync.OnceValue(func() *gin.Engine {

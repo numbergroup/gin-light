@@ -1,4 +1,4 @@
-module github.com/gin-gonic/gin
+module github.com/numbergroup/gin-light
 
 go 1.26.0
 

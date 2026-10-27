@@ -20,7 +20,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/bytesconv"
+	"github.com/numbergroup/gin-light/internal/bytesconv"
 )
 
 const (

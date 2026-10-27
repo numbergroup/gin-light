@@ -1,6 +1,6 @@
 package encoding
 
-import "github.com/gin-gonic/gin/internal/msgpack/def"
+import "github.com/numbergroup/gin-light/internal/msgpack/def"
 
 func (e *encoder) writeBool(v bool) error {
 	if v {

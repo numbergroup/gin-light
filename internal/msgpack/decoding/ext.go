@@ -3,7 +3,7 @@ package decoding
 import (
 	"encoding/binary"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (d *decoder) readIfExtType(code byte) (innerType int8, data []byte, err error) {

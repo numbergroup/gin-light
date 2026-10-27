@@ -4,7 +4,7 @@ import (
 	"math"
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (e *encoder) writeSliceLength(l int) error {

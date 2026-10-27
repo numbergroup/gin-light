@@ -3,7 +3,7 @@ package decoding
 import (
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/common/decodingutil"
+	"github.com/numbergroup/gin-light/internal/msgpack/common/decodingutil"
 )
 
 const (

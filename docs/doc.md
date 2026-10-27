@@ -818,7 +818,7 @@ import (
   "log"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -974,8 +974,8 @@ import (
   "net/http"
   "time"
 
-  "github.com/gin-gonic/gin"
-  "github.com/gin-gonic/gin/binding"
+  "github.com/numbergroup/gin-light"
+  "github.com/numbergroup/gin-light/binding"
   "github.com/go-playground/validator/v10"
 )
 
@@ -1042,7 +1042,7 @@ import (
   "log"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Person struct {
@@ -1080,7 +1080,7 @@ import (
   "net/http"
   "time"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Person struct {
@@ -1134,7 +1134,7 @@ package main
 import (
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Person struct {
@@ -1186,7 +1186,7 @@ package main
 import (
   "log"
   "time"
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Person struct {
@@ -1234,7 +1234,7 @@ package main
 import (
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Person struct {
@@ -1274,7 +1274,7 @@ import (
   "encoding"
   "strings"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type Birthday string
@@ -1328,8 +1328,8 @@ package main
 import (
   "strings"
 
-  "github.com/gin-gonic/gin"
-  "github.com/gin-gonic/gin/binding"
+  "github.com/numbergroup/gin-light"
+  "github.com/numbergroup/gin-light/binding"
 )
 
 type Birthday string
@@ -1382,7 +1382,7 @@ import (
   "fmt"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 type testHeader struct {
@@ -2026,7 +2026,7 @@ import (
   "net/http"
   "time"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func formatAsDate(t time.Time) string {
@@ -2081,7 +2081,7 @@ import (
   "html/template"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 //go:embed assets/* templates/*
@@ -2168,8 +2168,8 @@ package main
 import (
   "io"
 
-  "github.com/gin-gonic/gin"
-  "github.com/gin-gonic/gin/codec/json"
+  "github.com/numbergroup/gin-light"
+  "github.com/numbergroup/gin-light/codec/json"
   jsoniter "github.com/json-iterator/go"
 )
 
@@ -2225,7 +2225,7 @@ import (
   "net/http"
 
   "github.com/gin-gonic/autotls"
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2250,7 +2250,7 @@ import (
   "net/http"
 
   "github.com/gin-gonic/autotls"
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
   "golang.org/x/crypto/acme/autocert"
 )
 
@@ -2284,7 +2284,7 @@ import (
   "net/http"
   "time"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
   "golang.org/x/sync/errgroup"
 )
 
@@ -2401,7 +2401,7 @@ import (
   "syscall"
   "time"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2459,7 +2459,7 @@ import (
   "log"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 var html = template.Must(template.New("https").Parse(`
@@ -2502,7 +2502,7 @@ func main() {
 import (
   "fmt"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2543,7 +2543,7 @@ import (
   "net/http"
   "time"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2597,7 +2597,7 @@ unnecessary computation.
 import (
   "fmt"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2623,7 +2623,7 @@ Look at the example below:
 import (
   "fmt"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -2659,7 +2659,7 @@ package main
 import (
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  "github.com/numbergroup/gin-light"
 )
 
 func setupRouter() *gin.Engine {

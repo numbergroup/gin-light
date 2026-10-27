@@ -16,7 +16,7 @@ import (
 	"strings"
 	"testing"
 
-	testdata "github.com/gin-gonic/gin/testdata/protoexample"
+	testdata "github.com/numbergroup/gin-light/testdata/protoexample"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.mongodb.org/mongo-driver/v2/bson"

@@ -11,7 +11,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gin-gonic/gin/internal/msgpack"
+	"github.com/numbergroup/gin-light/internal/msgpack"
 )
 
 type msgpackBinding struct{}

@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/msgpack/common"
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/common"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 var (

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 // asTimeWithCode decodes a time from either the msgpack timestamp extension

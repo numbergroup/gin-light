@@ -4,7 +4,7 @@ import (
 	"math"
 	"unsafe"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (e *encoder) writeString(str string) error {

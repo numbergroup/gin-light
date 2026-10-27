@@ -14,8 +14,8 @@ package msgpack
 import (
 	"io"
 
-	"github.com/gin-gonic/gin/internal/msgpack/decoding"
-	"github.com/gin-gonic/gin/internal/msgpack/encoding"
+	"github.com/numbergroup/gin-light/internal/msgpack/decoding"
+	"github.com/numbergroup/gin-light/internal/msgpack/encoding"
 )
 
 // Encode writes the MessagePack encoding of v to w.

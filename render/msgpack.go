@@ -9,7 +9,7 @@ package render
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin/internal/msgpack"
+	"github.com/numbergroup/gin-light/internal/msgpack"
 )
 
 // Check interface implemented here to support go build tag nomsgpack.

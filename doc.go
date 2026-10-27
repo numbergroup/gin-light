@@ -7,7 +7,7 @@ Example:
 
 	package main
 
-	import "github.com/gin-gonic/gin"
+	import "github.com/numbergroup/gin-light"
 
 	func main() {
 		r := gin.Default()
@@ -19,4 +19,4 @@ Example:
 		r.Run() // listen and serve on 0.0.0.0:8080
 	}
 */
-package gin // import "github.com/gin-gonic/gin"
+package gin // import "github.com/numbergroup/gin-light"

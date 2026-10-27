@@ -3,7 +3,7 @@ package decoding
 import (
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (d *decoder) asBoolWithCode(code byte, k reflect.Kind) (bool, error) {

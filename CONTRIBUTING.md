@@ -8,7 +8,7 @@ We welcome both issue reports and pull requests! Please follow these guidelines 
   - Use the search tool to check for existing issues or feature requests.
   - Review existing issues and provide feedback or react to them.
   - Use English for all communications — it is the language all maintainers read and write.
-  - For questions, configuration or deployment problems, please use the [Discussions Forum](https://github.com/gin-gonic/gin/discussions).
+  - For questions, configuration or deployment problems, please use the [Discussions Forum](https://github.com/numbergroup/gin-light/discussions).
   - For bug reports involving sensitive security issues, email <appleboy.tw@gmail.com> instead of posting publicly.
 
 - **Reporting a bug:**
@@ -23,9 +23,9 @@ We welcome both issue reports and pull requests! Please follow these guidelines 
 
 _For API Documentation, User Guides, and more, see:_
 
-- [Go.dev API Documentation](https://pkg.go.dev/github.com/gin-gonic/gin)
+- [Go.dev API Documentation](https://pkg.go.dev/github.com/numbergroup/gin-light)
 - [Gin User Guides](https://gin-gonic.com/)
-- [Discussions Forum](https://github.com/gin-gonic/gin/discussions)
+- [Discussions Forum](https://github.com/numbergroup/gin-light/discussions)
 
 ## Pull Requests
 

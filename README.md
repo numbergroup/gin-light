@@ -1,19 +1,15 @@
-# Gin Web Framework
+# Gin Light
 
-<img align="right" width="159px" src="https://raw.githubusercontent.com/gin-gonic/logo/master/color.png">
+[![Build Status](https://github.com/numbergroup/gin-light/actions/workflows/gin.yml/badge.svg?branch=master)](https://github.com/numbergroup/gin-light/actions/workflows/gin.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/numbergroup/gin-light?status.svg)](https://pkg.go.dev/github.com/numbergroup/gin-light?tab=doc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/numbergroup/gin-light)](https://goreportcard.com/report/github.com/numbergroup/gin-light)
 
-[![Build Status](https://github.com/gin-gonic/gin/actions/workflows/gin.yml/badge.svg?branch=master)](https://github.com/gin-gonic/gin/actions/workflows/gin.yml)
-[![Trivy Security Scan](https://github.com/gin-gonic/gin/actions/workflows/trivy-scan.yml/badge.svg)](https://github.com/gin-gonic/gin/actions/workflows/trivy-scan.yml)
-[![codecov](https://codecov.io/gh/gin-gonic/gin/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-gonic/gin)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gin-gonic/gin)](https://goreportcard.com/report/github.com/gin-gonic/gin)
-[![Go Reference](https://pkg.go.dev/badge/github.com/gin-gonic/gin?status.svg)](https://pkg.go.dev/github.com/gin-gonic/gin?tab=doc)
-[![Sourcegraph](https://sourcegraph.com/github.com/gin-gonic/gin/-/badge.svg)](https://sourcegraph.com/github.com/gin-gonic/gin?badge)
-[![Open Source Helpers](https://www.codetriage.com/gin-gonic/gin/badges/users.svg)](https://www.codetriage.com/gin-gonic/gin)
-[![Release](https://img.shields.io/github/release/gin-gonic/gin.svg?style=flat-square)](https://github.com/gin-gonic/gin/releases)
+Gin Light is a lighter derivative of the [Gin Web Framework](https://github.com/gin-gonic/gin), for those who need a much smaller Gin. It keeps Gin's API, and its documentation at [gin-gonic.com](https://gin-gonic.com) applies.
 
-## 📰 Gin 1.12.0 is now available!
+**What is different from Gin:**
 
-We're excited to announce the release of **[Gin 1.12.0](https://gin-gonic.com/en/blog/news/gin-1-12-0-release-announcement/)**! This release brings new features, performance improvements, and important bug fixes. Check out the [release announcement](https://gin-gonic.com/en/blog/news/gin-1-12-0-release-announcement/) on our official blog for the full details.
+- **No [bytedance/sonic](https://github.com/bytedance/sonic).** The `sonic` build tag is gone; JSON uses `encoding/json`, or `go_json` / `jsoniter` with their build tags.
+- **No [ugorji/go/codec](https://github.com/ugorji/go).** MessagePack rendering and binding use a small built-in encoder derived from [shamaton/msgpack](https://github.com/shamaton/msgpack), which produces and accepts the same data as Gin's previous ugorji-based implementation. This cuts about 6 MB from a minimal binary.
 
 ---
 
@@ -49,11 +45,13 @@ Gin combines the simplicity of Express.js-style routing with Go's performance ch
 
 ### Installation
 
-With [Go's module support](https://go.dev/wiki/Modules#how-to-use-modules), simply import Gin in your code and Go will automatically fetch it during build:
+With [Go's module support](https://go.dev/wiki/Modules#how-to-use-modules), simply import Gin Light in your code and Go will automatically fetch it during build:
 
 ```go
-import "github.com/gin-gonic/gin"
+import gin "github.com/numbergroup/gin-light"
 ```
+
+The package name is still `gin`, so existing code only needs its import path changed.
 
 ### Your First Gin Application
 
@@ -66,7 +64,7 @@ import (
   "log"
   "net/http"
 
-  "github.com/gin-gonic/gin"
+  gin "github.com/numbergroup/gin-light"
 )
 
 func main() {
@@ -126,7 +124,7 @@ After running your first Gin application, explore these resources to learn more:
 
 ### API Reference
 
-- **[Go.dev API Documentation](https://pkg.go.dev/github.com/gin-gonic/gin)** - Complete API reference with examples
+- **[Go.dev API Documentation](https://pkg.go.dev/github.com/numbergroup/gin-light)** - Complete API reference with examples
 
 ### User Guides
 
@@ -209,7 +207,7 @@ Gin powers many high-traffic applications and services in production:
 
 ## 🤝 Contributing
 
-Gin is the work of hundreds of contributors from around the world. We welcome and appreciate your contributions! See the full list of [contributors](https://github.com/gin-gonic/gin/graphs/contributors).
+Gin is the work of hundreds of contributors from around the world; see the full list of [Gin contributors](https://github.com/gin-gonic/gin/graphs/contributors). Changes that are not specific to Gin Light are best contributed [upstream](https://github.com/gin-gonic/gin).
 
 ### How to Contribute
 

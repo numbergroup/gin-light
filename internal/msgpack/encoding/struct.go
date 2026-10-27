@@ -3,7 +3,7 @@ package encoding
 import (
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/common"
+	"github.com/numbergroup/gin-light/internal/msgpack/common"
 )
 
 func (e *encoder) writeStruct(rv reflect.Value) error {

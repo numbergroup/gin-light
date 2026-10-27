@@ -3,7 +3,7 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 // Like ugorji/go/codec, complex numbers are encoded as their real part and

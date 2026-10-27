@@ -15,9 +15,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gin-gonic/gin/internal/bytesconv"
-	filesystem "github.com/gin-gonic/gin/internal/fs"
-	"github.com/gin-gonic/gin/render"
+	"github.com/numbergroup/gin-light/internal/bytesconv"
+	filesystem "github.com/numbergroup/gin-light/internal/fs"
+	"github.com/numbergroup/gin-light/render"
 	"github.com/quic-go/quic-go/http3"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

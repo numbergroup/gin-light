@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gin-gonic/gin/internal/msgpack"
+	"github.com/numbergroup/gin-light/internal/msgpack"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

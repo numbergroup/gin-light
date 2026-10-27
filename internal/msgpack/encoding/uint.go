@@ -3,7 +3,7 @@ package encoding
 import (
 	"math"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (e *encoder) writeUint(v uint64) error {

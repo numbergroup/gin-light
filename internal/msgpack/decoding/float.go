@@ -5,7 +5,7 @@ import (
 	"math"
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (d *decoder) asFloat64WithCode(code byte, k reflect.Kind) (float64, error) {

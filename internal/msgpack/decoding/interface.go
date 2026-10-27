@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/gin-gonic/gin/internal/msgpack/common/decodingutil"
-	"github.com/gin-gonic/gin/internal/msgpack/def"
+	"github.com/numbergroup/gin-light/internal/msgpack/common/decodingutil"
+	"github.com/numbergroup/gin-light/internal/msgpack/def"
 )
 
 func (d *decoder) asInterface(k reflect.Kind) (any, error) {

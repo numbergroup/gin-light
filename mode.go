@@ -10,7 +10,7 @@ import (
 	"os"
 	"sync/atomic"
 
-	"github.com/gin-gonic/gin/binding"
+	"github.com/numbergroup/gin-light/binding"
 )
 
 // EnvGinMode indicates environment name for gin mode.
