@@ -41,7 +41,6 @@ jobs:
           [
             "",
             "-tags nomsgpack",
-            "-tags go_json",
             "-race",
           ]
         include:

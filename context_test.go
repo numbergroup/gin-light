@@ -29,7 +29,6 @@ import (
 
 	"github.com/gin-contrib/sse"
 	"github.com/numbergroup/gin-light/binding"
-	"github.com/numbergroup/gin-light/codec/json"
 	testdata "github.com/numbergroup/gin-light/testdata/protoexample"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -2321,17 +2320,6 @@ func TestContextContentType(t *testing.T) {
 }
 
 func TestContextBindRequestTooLarge(t *testing.T) {
-	// When using go-json as JSON encoder, they do not propagate the http.MaxBytesError error
-	// The response will fail with a generic 400 instead of 413
-	// https://github.com/goccy/go-json/issues/485
-	var expectedCode int
-	switch json.Package {
-	case "github.com/goccy/go-json":
-		expectedCode = http.StatusBadRequest
-	default:
-		expectedCode = http.StatusRequestEntityTooLarge
-	}
-
 	w := httptest.NewRecorder()
 	c, _ := CreateTestContext(w)
 
@@ -2347,7 +2335,7 @@ func TestContextBindRequestTooLarge(t *testing.T) {
 
 	assert.Empty(t, obj.Bar)
 	assert.Empty(t, obj.Foo)
-	assert.Equal(t, expectedCode, w.Code)
+	assert.Equal(t, http.StatusRequestEntityTooLarge, w.Code)
 	assert.True(t, c.IsAborted())
 }
 

@@ -10,8 +10,6 @@ import (
 	"net/http"
 	"os"
 	"time"
-
-	"github.com/mattn/go-isatty"
 )
 
 type consoleColorModeValue int
@@ -255,11 +253,12 @@ func LoggerWithConfig(conf LoggerConfig) HandlerFunc {
 
 	notlogged := conf.SkipPaths
 
-	isTerm := true
+	isTerm := false
 
-	if w, ok := out.(*os.File); !ok || os.Getenv("TERM") == "dumb" ||
-		(!isatty.IsTerminal(w.Fd()) && !isatty.IsCygwinTerminal(w.Fd())) {
-		isTerm = false
+	if w, ok := out.(*os.File); ok && os.Getenv("TERM") != "dumb" {
+		if fi, err := w.Stat(); err == nil && fi.Mode()&os.ModeCharDevice != 0 {
+			isTerm = true
+		}
 	}
 
 	var skip map[string]struct{}

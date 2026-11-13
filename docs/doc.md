@@ -3,7 +3,6 @@
 ## Contents
 
 - [Build Tags](#build-tags)
-  - [Build with json replacement](#build-with-json-replacement)
   - [Build without MsgPack rendering feature](#build-without-msgpack-rendering-feature)
 - [Routing](#routing)
   - [Using GET, POST, PUT, PATCH, DELETE and OPTIONS](#using-get-post-put-patch-delete-and-options)
@@ -78,16 +77,6 @@
 You can find a number of ready-to-run examples at [Gin examples repository](https://github.com/gin-gonic/examples).
 
 ## Build tags
-
-### Build with json replacement
-
-Gin uses `encoding/json` as the default JSON package but you can change it by building from other tags.
-
-[go-json](https://github.com/goccy/go-json)
-
-```sh
-go build -tags=go_json .
-```
 
 ### Build without `MsgPack` rendering feature
 
