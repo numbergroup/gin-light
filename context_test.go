@@ -28,11 +28,11 @@ import (
 	"time"
 
 	"github.com/gin-contrib/sse"
+	"github.com/numbergroup/bson"
 	"github.com/numbergroup/gin-light/binding"
 	testdata "github.com/numbergroup/gin-light/testdata/protoexample"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.mongodb.org/mongo-driver/v2/bson"
 	"google.golang.org/protobuf/proto"
 )
 

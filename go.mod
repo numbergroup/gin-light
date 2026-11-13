@@ -6,10 +6,10 @@ require (
 	github.com/gin-contrib/sse v1.2.1
 	github.com/go-playground/validator/v10 v10.30.6
 	github.com/goccy/go-yaml v1.19.2
+	github.com/numbergroup/bson v1.0.0
 	github.com/pelletier/go-toml/v2 v2.4.3
 	github.com/quic-go/quic-go v0.65.0
 	github.com/stretchr/testify v1.12.1
-	go.mongodb.org/mongo-driver/v2 v2.10.0
 	golang.org/x/net v0.62.0
 	google.golang.org/protobuf v1.36.12
 )
